@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create Recipe</title>
+
+		<style>
+			.container {
+				background-color: rgb(37, 130, 130);
+				display: flex;
+				flex-direction: column;
+				padding: 10px;
+				border-radius: 5px;
+			}
+
+			#title {
+				flex: auto;
+				font-size: large;
+				border-radius: 5px;
+				height: 30px;
+				padding-left: 10px;
+			}
+
+			.ingredienser {
+				display: flex;
+				flex-direction: row;
+			}
+			.ingredienser input {
+				padding-left: 10px;
+				flex: auto;
+				width: 5px;
+				border-radius: 5px;
+				height: 30px;
+			}
+			#addExtraIngredients,
+			#removeExtraIngredients {
+				font-size: large;
+				cursor: pointer;
+				flex: auto;
+			}
+			#exportValue {
+				font-size: large;
+				cursor: pointer;
+			}
+			textarea {
+				border-radius: 5px;
+				padding: 10px;
+				margin: 5px 0;
+			}
+
+			.footer {
+				margin-top: 10px;
+			}
+			a {
+				background-color: rgb(133, 133, 133);
+				color: white;
+
+				text-decoration: none;
+				text-transform: uppercase;
+				border-radius: 5px;
+				padding: 5px;
+			}
+
+			a:hover {
+				background-color: #555;
+			}
+
+			.upDown {
+				display: flex;
+			}
+
+			#qDiv {
+				display: flex;
+				margin: 5px 0;
+			}
+			#Qtotal {
+				flex: auto;
+				padding-left: 10px;
+				border-radius: 5px;
+				height: 30px;
+			}
+			#Qtype {
+				flex: auto;
+				padding-left: 10px;
+				border-radius: 5px;
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<input id="title" type="text" placeholder="Tittel" />
+			<textarea
+				id="descri"
+				rows="5"
+				cols="60"
+				placeholder="Beskrivelse"
+			></textarea>
+
+			<div id="qDiv">
+				<input id="Qtotal" type="number" placeholder="gir totalt 'eks. 20'" />
+				<input
+					id="Qtype"
+					type="text"
+					placeholder="eks. 'boller' eller 'porsjoner"
+				/>
+			</div>
+
+			<div id="ingrediensdiv">
+				<div class="ingredienser">
+					<input type="text" placeholder="Ingrediens" />
+					<input type="number" placeholder="Antall" />
+					<input type="text" placeholder="Målenhet" />
+				</div>
+			</div>
+
+			<div class="upDown">
+				<input type="button" value="-" id="removeExtraIngredients" />
+				<input type="button" value="+" id="addExtraIngredients" />
+			</div>
+			<textarea id="exportedValue" cols="60" rows="10"></textarea><br />
+			<input type="button" id="exportValue" value="Export" />
+		</div>
+		<div class="footer"><a href="index.html">Til Kokebok</a></div>
+	</body>
+
+	<script>
+		const title = document.querySelector("#title");
+		const descri = document.querySelector("#descri");
+		const Qtotal = document.querySelector("#Qtotal");
+		const Qtype = document.querySelector("#Qtype");
+		const ingrediensdiv = document.querySelector("#ingrediensdiv");
+		const exportValue = document.querySelector("#exportValue");
+		const exportedValue = document.querySelector("#exportedValue");
+		const addExtraIngredients = document.querySelector("#addExtraIngredients");
+		let newRecipes = [];
+
+		const removeInputs = () => {
+			if (ingrediensdiv.childElementCount >= 2) {
+				ingrediensdiv.removeChild(ingrediensdiv.lastChild);
+			}
+		};
+
+		const addInputs = () => {
+			let div = document.createElement("div");
+			div.setAttribute("class", "ingredienser");
+
+			let ingrediensInp = document.createElement("input");
+			ingrediensInp.setAttribute("type", "text");
+			ingrediensInp.setAttribute("placeholder", "Ingrediens");
+
+			let quantityInp = document.createElement("input");
+			quantityInp.setAttribute("type", "number");
+			quantityInp.setAttribute("placeholder", "Antall");
+
+			let unitInp = document.createElement("input");
+			unitInp.setAttribute("type", "text");
+			unitInp.setAttribute("placeholder", "Målenhet");
+
+			div.appendChild(ingrediensInp);
+			div.appendChild(quantityInp);
+			div.appendChild(unitInp);
+
+			ingrediensdiv.appendChild(div);
+		};
+
+		addExtraIngredients.addEventListener("click", addInputs);
+		removeExtraIngredients.addEventListener("click", removeInputs);
+
+		exportValue.addEventListener("click", () => {
+			let ingredientsList = document.querySelectorAll(".ingredienser");
+			let ingList = [];
+			let Qlist = [];
+
+			//create list with all the ingredients
+			ingredientsList.forEach((ing) => {
+				let items = ing.querySelectorAll("input");
+				if (items[0].value != "" && items[1].value != null && items[2] != "") {
+					ingList.push([
+						items[0].value,
+						parseFloat(items[1].value),
+						items[2].value,
+					]);
+				}
+			});
+
+			if (Qtotal.value != "" && Qtype.value != "") {
+				Qlist[0] = Qtotal.value;
+				Qlist[1] = Qtype.value;
+			}
+
+			if (
+				title.value != "" &&
+				descri.value != "" &&
+				ingList.length > 0 &&
+				Qlist.length > 0
+			) {
+				newRecipes.push(new Recipe(title.value, descri.value, ingList, Qlist));
+
+				exportedValue.value = JSON.stringify(newRecipes).slice(1, -1);
+				exportedValue.select();
+
+				title.value = "";
+				descri.value = "";
+				Qtotal.value = "";
+				Qtype.value = "";
+
+				ingrediensdiv.replaceChildren();
+				addInputs();
+			}
+		});
+
+		class Recipe {
+			constructor(title, description, ingredients, quantity) {
+				this.title = title;
+				this.description = description;
+				this.ingredients = ingredients;
+				this.quantity = quantity;
+			}
+			printRecipe() {
+				return {
+					title: this.title,
+					ingredients: this.ingredients,
+					description: this.description,
+					quantity: this.quantity,
+				};
+			}
+		}
+	</script>
+</html>

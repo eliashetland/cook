@@ -1,0 +1,137 @@
+header {
+	background-color: rgb(37, 130, 130);
+	padding: 20px;
+
+	color: rgb(255, 255, 255);
+	position: sticky;
+	top: 0px;
+	border-radius: 5px;
+}
+
+h3 {
+	padding: 0px 10px;
+}
+
+table {
+	padding: 5px;
+	width: 100%;
+}
+td {
+	word-wrap: break-all;
+}
+
+p {
+	padding: 5px;
+}
+
+#submitBtn {
+	font-size: large;
+	cursor: pointer;
+}
+#inputField {
+	font-size: large;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+#recipeContainer {
+	height: max-content;
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+}
+
+.linkRek {
+	padding: 5px 0px;
+}
+
+#descriptionContainer {
+	padding: 0px;
+	min-width: 200px;
+	display: flex;
+	flex: auto;
+	flex-wrap: wrap;
+	background-color: rgb(121, 193, 185);
+	border-radius: 5px;
+}
+
+h1 {
+	padding: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	flex: initial;
+	color: white;
+	border-radius: 5px;
+	background-color: rgb(49, 145, 144);
+}
+
+#ingredientsDiv {
+	background-color: rgb(170, 213, 209);
+	padding: 5px;
+	padding-left: 15px;
+	min-width: 200px;
+	flex: initial;
+	border-radius: 5px;
+}
+
+#descriptionDiv {
+	background-color: rgb(121, 193, 185);
+	padding: 5px;
+	border-radius: 5px;
+	padding-left: 15px;
+	min-width: 200px;
+	flex: auto;
+}
+
+/* link */
+
+#showAllEl {
+	background-color: rgb(133, 133, 133);
+	padding: 5px;
+	margin-right: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#showAllEl:hover {
+	background-color: #555;
+}
+a {
+	background-color: rgb(133, 133, 133);
+	color: white;
+	padding: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+a:hover {
+	background-color: #555;
+}
+
+.footer {
+	margin-top: 10px;
+}
+
+#plus,
+#minus {
+	cursor: pointer;
+	user-select: none;
+	font-size: large;
+}
+
+#quantityDiv {
+	display: flex;
+	flex-direction: column;
+}
+
+#quantity {
+	flex: auto;
+	border-radius: 5px;
+
+	font-size: large;
+	text-align: center;
+}
+#inlineBtn {
+	display: flex;
+}
