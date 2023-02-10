@@ -166,4 +166,5 @@ const recipes = [
 		],
 		quantity: ["50", "Jødekaker"],
 	},
+{"title":"Smuldrepai","description":"1. Kutt epler og legg i bunn i ildfast form\n\n2. Smelt smør\n\n3. Bland sammen smør, havregryn og sukker\n\n4. Legg kanel oppå eplene\n\n5. Legg på resten\n\n6. 200 grader i 15-20min\n\n7. Server med is","ingredients":[["Havregryn",2,"Kopper"],["Sukker",1,"Kopper"],["Eple",2,"stk"],["Smør",1,"Kopper"],["Kanel",1,"ss"]],"quantity":["3","porsjoner"]},
 ];
