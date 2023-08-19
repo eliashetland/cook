@@ -191,4 +191,106 @@ const recipes = [
     ],
     quantity: ["1", "kake"],
   },
+  {
+    title: "Eplekake",
+    description:
+      "1. rør sammen smør og sukker til hvitt\n\n2. ha i ett egg om gangen bland inn\n\n3. ha i det tørre\n\n4. legg på epler\n\n5. stek i 40 min på 200C",
+    ingredients: [
+      ["smør", 200, "g"],
+      ["sukker", 200, "g"],
+      ["egg", 3, "stk"],
+      ["hvetemel", 200, "g"],
+      ["vaniljesukker", 1, "ts"],
+      ["epler", 4, "stk"],
+    ],
+    quantity: ["1", "kake"],
+  },
+  {
+    title: "Vepsebol",
+    description:
+      "1. Pisk eggehviter og sukker stivt\n\n2. bland sammen resten\n\n3. stekes 15 min på 150C",
+    ingredients: [
+      ["eggehviter", 3, "stk"],
+      ["sukker", 225, "g"],
+      ["hakkede mandler", 200, "g"],
+      ["sjokolade", 100, "g"],
+      ["kokus", 1, "kopp"],
+    ],
+    quantity: ["15", "?vepsebol"],
+  },
+  {
+    title: "Pinnebrød",
+    description: "1. bland sammen alt",
+    ingredients: [
+      ["hvetemel", 250, "g"],
+      ["salt", 0.5, "ts"],
+      ["bakepulver", 0.5, "ts"],
+      ["margarin", 1, "ss"],
+      ["melk", 1.5, "dl"],
+    ],
+    quantity: ["4", "?porsjoner"],
+  },
+  {
+    title: "Kanel S'er",
+    description:
+      "1. rør sukker og smør hvitt\n\n2. tilsett egg, mel og bakepulver\n\n3. 1 time i kjøleskap\n\n4. rull ut s'er i kanel og sukker\n\n5. stekes i 10min på 200C",
+    ingredients: [
+      ["smør", 150, "g"],
+      ["sukker", 125, "g"],
+      ["egg", 1, "stk"],
+      ["hvetemel", 200, "g"],
+      ["bakepulver", 1, "ts"],
+      ["kanel", 2, "ts"],
+      ["sukker", 2, "ss"],
+    ],
+    quantity: ["20", "Stk"],
+  },
+  {
+    title: "Chocolate chip Cookies",
+    description:
+      "1. smør og sukker\n\n2. egg og vaniljesukker\n\n3. hvetemel og bakepulver\n\n4. sjokoladebiter\n\n5. 190C i 8-10min",
+    ingredients: [
+      ["smør", 200, "g"],
+      ["sukker", 1.5, "kopper"],
+      ["egg", 2, "stk"],
+      ["vaniljesukker", 1, "ts"],
+      ["hvetemel", 2, "kopper"],
+      ["bakepulver", 1, "ts"],
+      ["sjokoladebiter", 1, "plate"],
+    ],
+    quantity: ["20", "?cookies"],
+  },
+  {
+    title: "Svinemedlajong med fløtesaus",
+    description:
+      "1. krydre med salt og pepper\n\n2. stek filet\n\n3. kok resten og tilsett filet\n\n4. serveres med poteter og gulrot\n\n",
+    ingredients: [
+      ["svinefilet", 500, "g"],
+      ["smør", 2, "ss"],
+      ["grønne druer", 200, "g"],
+      ["fløte", 3, "dl"],
+      ["soyasaus/kalvefond", 3, "dråper"],
+      ["persille", 0.5, "dl"],
+    ],
+    quantity: ["5", "porsjoner"],
+  },
+  {
+    title: "kanelkake",
+    description:
+      "1. bland sammen kulturmelk, sukker, hvetemel, smeltet smør, natron og kanel\n\n2. (kanel kan byttes ut med kakao/oboy for å få sjokoladekake)\n\n3. stekes 30-40min på 180C\n\n4. Lag glassur\n\n5. Bland sammen smør, melis, sjokolade og vaniljesukker\n\n6. smeltes, (ser ut som det skiller seg), rør i ett egg",
+    ingredients: [
+      ["kulturmelk", 4, "kopper"],
+      ["sukker", 4, "kopper"],
+      ["hvetemel", 6, "kopper"],
+      ["smeltet smør", 2, "kopper"],
+      ["natron", 1, "stor ts"],
+      ["kanel", 1, "pk"],
+      ["smør (glassur)", 1, "kopp"],
+      ["melis (glassur)", 2.5, "kopp"],
+      ["sjokolade (glassur)", 1, "plate"],
+      ["vaniljesukker (glassur)", 1, "ts"],
+      ["egg (glassur)", 1, "stk"],
+    ],
+    quantity: ["1", "lanpanne"],
+  },
 ];
