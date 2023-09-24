@@ -9,29 +9,34 @@
 		<title>Kokebok</title>
 	</head>
 	<body>
-        <header>
-		     <label id="showAllEl">Vis Alle</label> <input id="inputField" list="inputRecipeList" name="inputRecipe" placeholder="velg mat" /></label>
-		    <datalist id="inputRecipeList"></datalist><input id="submitBtn" type="submit" value="søk">
-        </header> 
-        <div id="recipeContainer">
-            <h1 id="recipeTitle">Elias' kokebok</h1>
-            <div id="descriptionContainer">
-                <div id="ingredientsDiv">
-                    <h3 id="youNeedHeader" >Retter</h3>
-                    <table id="ingredients"></table>
+
+        <div class="appContainer">
+            <header>
+                <label id="showAllEl">Vis Alle</label> <input id="inputField" list="inputRecipeList" name="inputRecipe" placeholder="velg mat" /></label>
+                <datalist id="inputRecipeList"></datalist><input id="submitBtn" type="submit" value="søk">
+            </header> 
+            <div id="recipeContainer">
+                <h1 id="recipeTitle">Elias' kokebok</h1>
+                <div id="descriptionContainer">
+                    <div id="ingredientsDiv">
+                        <h3 id="youNeedHeader" >Retter</h3>
+                        <table id="ingredients"></table>
+                    </div>
+                    <div id="descriptionDiv">
+                        <h3 id="descriptionHeader">
+                        </h3>
+                        <p id="description"></p>
+                        <div id='quantityDiv'></div>
+                    </div>
                 </div>
-                <div id="descriptionDiv">
-                    <h3 id="descriptionHeader">
-                    </h3>
-                    <p id="description"></p>
-                    <div id='quantityDiv'></div>
-                </div>
+            
+            </div>
+            <div class="footer">
+                <a href="createRecipe.html">ADD NEW</a>
             </div>
 
         </div>
-        <div class="footer">
-            <a href="createRecipe.html">ADD NEW</a>
-        </div>
+
 		<script src="Oppskrifter.js"></script>
 		<script src="Main.js"></script>
 	</body>

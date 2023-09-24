@@ -42,7 +42,8 @@ p {
 }
 
 .linkRek {
-	padding: 5px 0px;
+	padding: 1px 0px;
+	
 }
 
 #descriptionContainer {
@@ -92,6 +93,9 @@ h1 {
 	border-radius: 5px;
 	cursor: pointer;
 }
+
+
+
 #showAllEl:hover {
 	background-color: #555;
 }
@@ -103,6 +107,7 @@ a {
 	text-transform: uppercase;
 	border-radius: 5px;
 	padding: 5px;
+	display: block;
 }
 
 a:hover {
@@ -134,4 +139,15 @@ a:hover {
 }
 #inlineBtn {
 	display: flex;
+}
+
+.appContainer{
+	max-width: 1000px;
+	width: 100%;
+}
+
+body{
+	background-color: darkslategrey;
+	display: flex;
+	justify-content: center;
 }
