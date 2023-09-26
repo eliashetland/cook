@@ -231,9 +231,9 @@ const recipes = [
     quantity: ["4", "?porsjoner"],
   },
   {
-    title: "Kanel S'er",
+    title: "Kanel Ser",
     description:
-      "1. rør sukker og smør hvitt\n\n2. tilsett egg, mel og bakepulver\n\n3. 1 time i kjøleskap\n\n4. rull ut s'er i kanel og sukker\n\n5. stekes i 10min på 200C",
+      "1. rør sukker og smør hvitt\n\n2. tilsett egg, mel og bakepulver\n\n3. 1 time i kjøleskap\n\n4. rull ut ser i kanel og sukker\n\n5. stekes i 10min på 200C",
     ingredients: [
       ["smør", 150, "g"],
       ["sukker", 125, "g"],
