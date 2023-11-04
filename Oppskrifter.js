@@ -293,4 +293,17 @@ const recipes = [
     ],
     quantity: ["1", "lanpanne"],
   },
+  {
+    title: "Kakemenn",
+    description:
+      "1. Smelt smør og bland med melk\n\n2. Bland inn sukker og hornsalt\n\n3. Tilsett halvparten av hvetemelet og rør godt sammen\n\n4. Tilsett resten av hvetemelet og elt deigen raskt\n\n5. Dekk deigen med plast og sett i kjøleskap i 2 timer\n\n6. Kjevl ut 0.5cm, stikk ut figurer\n\n7. 8-10 min 180C midt i ovnen ",
+    ingredients: [
+      ["smør", 100, "g"],
+      ["melk", 2.5, "dl"],
+      ["sukker", 3.5, "dl"],
+      ["hornsalt", 1, "ts"],
+      ["hvetemel", 12, "dl"],
+    ],
+    quantity: ["30", "kakemenn"],
+  },
 ];
