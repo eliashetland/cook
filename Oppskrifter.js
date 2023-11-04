@@ -306,4 +306,23 @@ const recipes = [
     ],
     quantity: ["30", "kakemenn"],
   },
+  {
+    title: "Peppernøtter Rigmor",
+    description:
+      "1. Margarin og sukker røres hvitt\n\n2. Rosenolje røres inn i fløten og blandes sammen med sitronskall og saft\n\n3. alt det tørre siktes i og røres i sammen med mandlene\n\n4. rulles så til pølser, som settes kaldt på et melet brett\n\n5. skjæres i skiver og stekes mellombrune",
+    ingredients: [
+      ["margarin", 500, "g"],
+      ["sukker", 750, "g"],
+      ["sirup", 250, "g"],
+      ["fløte", 1, "dl"],
+      ["saft og skall", 1, "sitron"],
+      ["rosenolje (apotek)", 1, "dråpe"],
+      ["skollede finhakkede mandler", 180, "g"],
+      ["hvetemel", 1200, "g"],
+      ["pottaske", 2, "ts"],
+      ["kanel", 4, "ts"],
+      ["kardemomme", 2, "ts"],
+    ],
+    quantity: ["100", "?peppernøtter"],
+  },
 ];
