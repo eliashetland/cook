@@ -309,7 +309,7 @@ const recipes = [
   {
     title: "Peppernøtter Rigmor",
     description:
-      "1. Margarin og sukker røres hvitt\n\n2. Rosenolje røres inn i fløten og blandes sammen med sitronskall og saft\n\n3. alt det tørre siktes i og røres i sammen med mandlene\n\n4. rulles så til pølser, som settes kaldt på et melet brett\n\n5. skjæres i skiver og stekes mellombrune",
+      "1. Margarin og sukker røres hvitt\n\n2. Rosenolje røres inn i fløten og blandes sammen med sitronskall og saft\n\n3. alt det tørre siktes i og røres i sammen med mandlene\n\n4. rulles så til pølser, som settes kaldt på et melet brett\n\n5. skjæres i skiver og stekes mellombrune, 180-200, 8 min",
     ingredients: [
       ["margarin", 500, "g"],
       ["sukker", 750, "g"],
